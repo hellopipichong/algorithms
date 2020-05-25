@@ -6,7 +6,6 @@ import java.util.Stack;
 
 /**
  * https://leetcode-cn.com/problems/next-greater-element-i/
- * 解法：单调栈
  */
 public class Solution {
 
@@ -25,7 +24,7 @@ public class Solution {
 
         Stack<Integer> stack = new Stack<>();
         for (int ele : nums2) {
-            // 只要栈中peek比ele小就说明ele比其他元素大
+            // 只要栈锟斤拷peek锟斤拷ele小锟斤拷说锟斤拷ele锟斤拷锟斤拷锟斤拷元锟截达拷
             while (!stack.isEmpty() && stack.peek() < ele) {
                 map.put(stack.pop(), ele);
             }

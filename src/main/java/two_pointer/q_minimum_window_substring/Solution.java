@@ -24,7 +24,7 @@ public class Solution {
         int minLeft = 0, minRight = 0, minLen = s.length();
         boolean isFound = false;
 
-        // unfixed sliding window£¬which is special usage of two pointers.
+        // unfixed sliding window which is special usage of two pointers.
         int left = 0, right = 0;
         while (right < s.length()) {
             char c = s.charAt(right);

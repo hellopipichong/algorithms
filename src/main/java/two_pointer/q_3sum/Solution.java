@@ -6,19 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 三数之和
  * https://leetcode-cn.com/problems/3sum
- * 从数组中找出三数之和为0；要么3个数都为0，要么至少一个负数，一个正数。排序是必要的。
- * 0 正好是相等的意思
- * <p>
- * 解题思路：
- * 1.保证数组有序。
- * <p>
- * <p>
- * 解题注意点：
- * 1.边界；
- * 2.不重复：
- *
  * @author wangyong30
  * @since 2020/4/21
  */
@@ -73,7 +61,7 @@ public class Solution {
             return Collections.emptyList();
         }
 
-        // 数组排序，单调递增
+        // 锟斤拷锟斤拷锟斤拷锟津，碉拷锟斤拷锟斤拷锟斤拷
         Arrays.sort(nums);
 
         if (nums[nums.length - 3] + nums[nums.length - 2] + nums[nums.length - 1] < 0) {
@@ -87,7 +75,7 @@ public class Solution {
                 break;
             }
 
-            // 防止重复
+            // 锟斤拷止锟截革拷
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }

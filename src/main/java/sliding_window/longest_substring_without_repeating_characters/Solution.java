@@ -4,10 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 无重复字符串最长子串
- * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
- * 解题思路：滑动窗口（队列：数组、字符串等等） 所谓滑动窗口就是控制左右边界，然后朝着一个方向遍历
- *
+ * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/*
  * @author wangyong
  * @since 2020/5/12
  */

@@ -7,11 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 两数之和
  * https://leetcode-cn.com/problems/two-sum/
- * 解题思路：hash表
  * <p>
- * tag:数组、hash
  *
  * @author wangyong
  * @since 2020/5/12
