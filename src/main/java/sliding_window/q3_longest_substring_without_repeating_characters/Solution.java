@@ -1,7 +1,9 @@
-package sliding_window.longest_substring_without_repeating_characters;
+package sliding_window.q3_longest_substring_without_repeating_characters;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/*
@@ -10,6 +12,32 @@ import java.util.Map;
  */
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
+        int left = 0, right = 0;
+        int maxLen = 0;
+        Set<Character> set = new HashSet<>();
+        while (right < s.length()) {
+            while (right < s.length() && !set.contains(s.charAt(right))) {
+                set.add(s.charAt(right));
+                int curLen = right - left + 1;
+                maxLen = curLen >= maxLen ? curLen : maxLen;
+                right++;
+            }
+
+            if (right == s.length()) break;
+
+            // shrink left point to skip the repeating characters
+            while (s.charAt(left) != s.charAt(right)) {
+                set.remove(s.charAt(left));
+                left++;
+            }
+            set.remove(s.charAt(left));
+            left++;
+        }
+        return maxLen;
+    }
+
+
+    public int lengthOfLongestSubstring2(String s) {
         if (s == null || s.length() == 0) {
             return 0;
         }

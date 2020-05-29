@@ -1,4 +1,4 @@
-package two_pointer.q_minimum_window_substring;
+package two_pointer.q76_minimum_window_substring;
 
 import java.util.HashMap;
 import java.util.Map;
